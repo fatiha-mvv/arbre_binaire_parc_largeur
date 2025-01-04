@@ -58,7 +58,7 @@ int main()
     cout << "\nAffichage Infixe " << endl;
     arbre->printTreeInfixe();
 
-    //affichage infixe
+    //affichage Postfixe
     cout << "\nAffichage Postfixe " << endl;
     arbre->printTreePostfixe();
 

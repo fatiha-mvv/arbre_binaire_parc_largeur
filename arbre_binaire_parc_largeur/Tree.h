@@ -40,8 +40,7 @@ public:
 	//afficher l'arbre postfixe (parcours en profondeur)
 	void printTreePostfixe()const;
 
-	
-	
+
 	//destructeur
 	~Tree();
 

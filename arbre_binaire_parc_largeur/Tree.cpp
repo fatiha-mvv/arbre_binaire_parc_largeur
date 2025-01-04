@@ -71,6 +71,11 @@ void Tree::insertAleatoire(int val)
 //---------> Fonction pour inserer a gauche puis a droit (jusqu'a remplir les niveaux)
 void Tree::insertAleatoireParNiveau(int value) 
 {
+    /*
+    ici j'ai utilisé une file (queue) pour parcourir l'arbre niveau par niveau
+    parceque il se base sur principe FIFO : Le noeud traité en premier est celui 
+    ajouté en premier, ce qui garantit un traitement par niveaux, de gauche à droite.
+    */
     std::queue<Tree*> q;
     q.push(this); //on insere la racine dans la file
 
@@ -163,6 +168,12 @@ void Tree::BFS() const
     }
 
     // Créer une file pour stocker les noeuds à visiter
+    /*
+    le parcours en largeur (BFS) suit une approche de type FIFO (First In, First Out),
+    où les noeuds sont explorés niveau par niveau. Pour cela, on doit visiter chaque noeud
+    dans l'ordre dans lequel il est ajouté à la file.
+    d'ou la file est la plus adaptée
+    */
     queue<Tree*> q;
     q.push(const_cast<Tree*>(this));  // Ajouter la racine à la file
 
